@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CANTEEN HUB</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+    <header class="headerContent">
+      <div id="header">
+         <span>CANTEEN HUB</span>
+        <img src="images/logo.jpeg" alt="">
+      </div>
+    </header>
+   <sidebar>
+    <div class="sidenav">
+        <span style="left: 63px; position: relative;">Menu</span>
+        <ul style=" position: relative;  bottom: -23px;  ">
+            <a href="#home" onclick="showContent('')"><li><h5>Home</h5></a></li><br>
+            <a href="#worker" onclick="showContent('worker')" ><li style=" bottom: 19px;"> <h5>Register Worker</h5> </li></a><br>
+            <a href="#consume" onclick="showContent('consume')"><li style=" bottom: 39px;"><h5>Register Consumption</h5></li></a><br>
+            <a href="#list" onclick="showContent('list')"><li style=" bottom: 59px;"><h5>List Workers</h5> </li></a><br>
+            <a href="#listConsumption" onclick="showContent('listConsumption')"><li style=" bottom: 80px;"><h5>List Consumption</h5></li></a><br>
+            <a href="#debts" onclick="showContent('userData')"><li style=" bottom: 101px;"><h5>View debts</h5></li></a>
+        </ul>
+        </div>
+    </sidebar>
+    <main class="mainContent">
+
+        <div id="worker" class="content">
+            <h3>Workers Form</h3><br>
+            <form method="dialog" id="workerForm">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <label for="fname" style=" left: 95px; position: relative;">First name:</label><br>
+                        <input type="text" name="fname" id="fname" style="width: 328px;left: 95px; position: relative;">
+                    </div>
+                    <div class="col-lg-6">
+                        <label for="lname" style=" left: -135px; position: relative;">Last name:</label><br>
+                        <input type="text" name="lname" id="lname" style="width: 328px;left: -135px; position: relative;"><br><br>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-6">
+                        <label for="DOB" style=" left: 95px; position: relative;">Date of birth</label><br>
+                        <input type="date" name="DOB" id="DOB" style="width: 328px; left: 95px; position: relative;">
+                    </div>
+                    <div class="col-lg-6">
+                        <label for="POB" style=" left: -135px; position: relative;">Place of birth</label><br>
+                        <input type="text" name="POB" id="POB" style="width: 328px;left: -135px; position: relative;"><br><br>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-lg-6">
+                        <label for="department:" style=" left: 95px; position: relative;">Department:</label><br>
+                        <select name="Department" id="dept" style="width: 328px; left: 95px; position: relative;">
+                            <option value="Marketing">Marketing</option>
+                            <option value="Printing">Printing</option>
+                            <option value="Finishing">Finishing</option>
+                            </select>
+                    </div>
+                    <div class="col-lg-6">
+                        <label for="status" style=" left: -135px; position: relative;">Status: </label><br>
+                        <select name="status" id="status" style="width: 328px; left: -135px; position: relative;">
+                            <option value="Permanent">Permanent</option>
+                            <option value="Temporal">Temporal</option>
+                            <option value="Intern">Intern</option>
+                            </select><br><br>
+            
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-lg-6">
+                        <label for="gender" style=" left: 95px; position: relative;">Gender :</label><br>
+                        <select name="gender" id="gender" style="width: 328px; left: 95px; position: relative;">
+                        <option value="Male">Masculine</option>
+                        <option value="Female">Feminine</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-6" style="left: -50px;  bottom: -26px;">
+                        <button type="button" class="btn btn-link" id="button" onclick="showContent('consume')">Add Consumption</button>
+                        </select>
+                    </div>
+                </div>
+                <div class="row" >
+                    <input type="submit" class="btn btn-primary" value="Save" id="save" onclick="createWorker()" style="position: relative; bottom: -38px; width: 347px;  left: 308px;">                   
+                </div>
+            </form>
+        </div>
+
+        </div>
+    
+    <div id="consume" class="content" style="margin-left: 166px; margin-top: 80px; display: none;">
+        <h3 style="position: relative;left: ;">Consumption Form</h3><br>
+        <form method="dialog" id="stafForm">
+            <div class="row">
+                <div class="col-lg-6">
+                    <label for="ConsumerName" style=" left: 207px; position: relative; font-size: 20px; width: 229px;">Consumer Name</label><br>
+                    <div id="ConsumerName" style="width:193px;left: 213px; position: relative; ">
+                        <select name="" id="workerList">
+
+                        </select>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <label for="consumerDate" style=" left: 95px; position: relative;">Consumption Date</label><br>
+                    <input type="date" name="consumerDate" id="consumerDate" style="width: 328px; left: 97px; position: relative;">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <label for="ConsumptionType" id="ConsumptionType" style=" left: 307px; position: relative; bottom: -30px;">Consumption Type:</label><br>
+                    <input type="checkbox" name="ConsumptionType" id="Food" value="Food" style="width: 30px;left: 341px; top: 28px; position: relative; font-size: small;"><label for="Food" style="left: 265px; top: 27px; position: relative;">Food</label>
+                    <input type="checkbox" name="ConsumptionType" id="Drink" value="Drink" style="width: 30px;left: 350px; position: relative; top: 28px;"><label for="Drink" style="left: 275px; position: relative; top: 27px;">Drink</label>
+                </div>
+                <div class="col-lg-6">
+                    <label for="extraConsumption" style=" left: 97px; position: relative; bottom: -116px; font-size: 20px;">Extra Places:</label>
+                    <input type="checkbox" name="extraConsumption" id="extraConsumption" style="width: 30px; left: 87px; bottom: -117px; position: relative;"><br><br>
+                </div>
+            </div>
+            
+            <div class="row" >
+                <input type="button" class="btn btn-primary" value="Save" id="save" onclick="createConsumer()" style="position: relative; bottom: -187px; width: 325px;  left: 308px;">                   
+            </div>
+                </div>
+            
+
+        <!-- List Consumption -->
+        <div id="listConsumption" class="content" style="position: relative; left: 250px; bottom: -60px; display: none;">
+            <table class="table" style="border: 1px; color: black;" >
+                <thead class="thead">
+                    <tr>
+                        <th>Number</th>
+                        <th>Date</th>
+                        <th>Name</th>
+                        <th>Department</th>
+                        <th>Consumption Type</th>
+                        <th>Amount</th>
+                        <th>Extra</th>
+                    </tr>
+                </thead>
+                    <tbody id="">
+                    </tbody>
+
+            </table>
+        </div>
+
+
+        <!-- List Workers -->
+        <div id="list" class="content" style="position: relative; left: 250px; bottom: -60px; display: none;">
+            <table class="table" style="border: 1px; color: black;" >
+                <thead class="thead">
+                    <tr>
+                        <th>Number</th>
+                        <th>Name</th>
+                        <th>Department</th>
+                        <th>Status</th>
+                        <th>Date of birth</th>
+                        <th>Gender</th>
+                        <th>Registration Date</th>
+                    </tr>
+                </thead>
+                    <tbody id="data">
+                    
+                    </tbody>
+            </table>
+        </div>
+
+
+    </main>
+
+    
+    <footer>
+        <div class="footer">
+            <p>@Copy Right Presprint PLC</p>
+        </div>
+    </footer>
+</body>
+<script src="index.js"></script>
+<script src="bootstrap.min.js"></script>
+</html>
+

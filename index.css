@@ -1,0 +1,142 @@
+body{
+    background-image: url('images/background.jpeg' );
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*
+* Header
+**/
+#header {
+    background-color: #f1f1f1; 
+    display: block;
+    padding: 15px 15px; 
+    text-align: center; 
+    font-weight: bold;
+    position: fixed;
+    top: 0;
+    width: 100%; 
+    transition: 0.2s;
+}
+span{
+    font-weight: bold;
+    font-size: 25px;
+    color: rgb(1, 1, 49);
+}
+
+img{
+    width: 50;
+    height: 30px;
+    position: relative;
+    left: -650px;
+    border-radius: 20px;
+}
+
+/*
+* Side bar
+*/
+
+.sidenav {
+    height: 100%; 
+    width: 210px; 
+    position: fixed;
+    z-index: 1; 
+    top: 68px; 
+    left: 0;
+    background-color: #bebcbc;
+    overflow-x: hidden;
+    padding-top: 0px;
+  }
+
+  /* The navigation menu links */
+.menu-link {
+    padding: 6px 5px 0 10px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+  }
+
+.menu-link input{
+    font-family: bold;
+    font-size: 15px;
+    border-style: none;
+}
+
+/*
+*  Footer
+*/
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(1, 1, 49);
+    color: white;
+    text-align: center;
+  }
+
+ .mainContent{
+    position: relative;
+    bottom: -45px;
+    height: 552px;
+    width: 1145px;
+    left: 100px;
+ }
+ label{
+    display: inline;
+    font-family: bold;
+    font-size: 20px;
+ }
+
+ a{
+    font-family: bold;
+    justify-content: center;
+
+ }
+
+ li{
+    color: black;
+    background-color: white;
+    border-radius: 5px;
+     position: relative;
+     left: -36px; 
+     width: 200px; 
+     height: 34px;
+ }
+ 
+ table{
+    border-right: black;
+    border-width: 1px;
+
+ }
+
+ .thead{
+    background-color: #f1f1f1;
+ }
+
+ .links{
+    border: black solid 1px;
+ }
+ 
+ h5{
+    left: 18px;
+    position: relative;
+    bottom: -4px;
+ }
+ #worker{
+    display: none;
+    position: relative;
+    left: 250px;
+    bottom: -60px;
+ }
+ #button{
+   border: 1px solid black;
+   background-color: mediumaquamarine;
+   color: black;
+   border-color: gray;
+ }
+ 
+ input[type="checkbox"]{
+   cursor: pointer;
+ }
